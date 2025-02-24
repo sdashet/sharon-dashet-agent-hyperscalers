@@ -1,0 +1,34 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sharon-dashet-agent-hyperscalers-app-dev
+  annotations:
+    argocd/app-selector: backstage.io/kubernetes-id=sharon-dashet-agent-hyperscalers-app
+    backstage.io/kubernetes-id: sharon-dashet-agent-hyperscalers-app
+    backstage.io/kubernetes-namespace: sharon-dashet
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: sdashet/sharon-dashet-agent-hyperscalers
+    tekton.dev/cicd : "true"
+  tags:
+    - python
+    - genai
+    - datascience
+    - langgraph
+    - hyperscalers
+  links:
+    - url: https://console-openshift-console.apps.cluster-lwhkm.lwhkm.sandbox3225.opentlc.com/dev-pipelines/ns/sharon-dashet/
+      title: Pipelines
+      icon: web
+    - url: https://console-openshift-console.apps.cluster-lwhkm.lwhkm.sandbox3225.opentlc.com/k8s/ns/sharon-dashet/deployments/agent
+      title: Deployment
+      icon: web
+    - url: https://rhods-dashboard-redhat-ods-applications.apps.cluster-lwhkm.lwhkm.sandbox3225.opentlc.com/projects/vllm-sharon-dashet
+      title: RHOAI Data Science Project
+      icon: web
+    - url: https://devspaces.apps.cluster-lwhkm.lwhkm.sandbox3225.opentlc.com/#https://github.com/sdashet/sharon-dashet-agent-hyperscalers?che-editor=che-incubator/che-code/latest&devfilePath=.devfile-vscode.yaml
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: "sharond"

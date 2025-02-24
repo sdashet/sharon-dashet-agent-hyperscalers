@@ -1,0 +1,9 @@
+chromadb==0.4.3
+duckduckgo_search
+gradio
+langchain-openai
+langchain_community
+langchain_experimental
+langgraph
+openai
+requests
